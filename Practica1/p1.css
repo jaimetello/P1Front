@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#meteorito {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+}
+
+.modMeteorito {
+    top: 20px;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+}
+#misil {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+}
+.modMisil {
+    top: 20px;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+}
+
+#nave {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 50%;
+    top: 85%;
+}
+#nav {
+    width: 80px;
+    height: 110px;
+    position: absolute;
+    
+    
+}
+
+
+#general {
+    height: 100%;
+    background-image: url("https://us.123rf.com/450wm/neyro2008/neyro20081611/neyro2008161100072/67379974-espacio-con-el-fondo-de-estrellas-de-vectores-galaxy-y-los-planetas-en-el-espacio-cosmos-patr%C3%B3n-univ.jpg?ver=6");
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    background-size: 100%;
+    }
+
+#pelota {
+    width: 40px;
+    height: 40px;
+    border: 1px solid#fff;
+    border-radius: 100px;
+    position: absolute;
+}
