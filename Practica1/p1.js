@@ -86,30 +86,34 @@ function destruirMeteorito(){
 
     }
 }
-/*if(document.getElementById("misil").style.left==document.getElementById("meteorito").style.left && document.getElementById("misil").style.top == document.getElementById("meteorito").style.bottom){
-if(document.getElementById("misil").style.left){
-}*/
+
 setInterval(destruirMeteorito,100);
 
 function destruirNave(){
-    const nave = document.getElementsById("nav")
-    const meteos = document.getElementsByClassName("modMeteorito");
-    const dchaM = parseInt(document.getElementsById("nav").style.left.replace("px", "")) + 30 
-    const izqM =  parseInt(document.getElementsById("nav").style.left.replace("px", ""))
-    const arrMis = parseInt(document.getElementsById("nav").style.top.replace("px", ""))
-    for(let i=0; i<meteos.length; i++){
-        const dchaMeteo =  parseInt(document.getElementsByClassName("modMeteorito")[i].style.left.replace("px", "")) + 60 
-        const izqMeteo =  parseInt(document.getElementsByClassName("modMeteorito")[i].style.left.replace("px", ""))
-        const AbajoMeteo = parseInt(document.getElementsByClassName("modMeteorito")[i].style.top.replace("px", "")) + 60 
-        const max = AbajoMeteo + 30; 
-        const min = AbajoMeteo - 30;
-        if((arrMis < max && arrMis > min) /*&& ((dchaM >= dchaMeteo && izqM <= dchaMeteo) || (dchaM >= izqMeteo && izqM <= izqMeteo) || (izqM > izqMeteo && dchaM < dchaMeteo))*/){
+    const nave = document.getElementById("nave")
+    const meteoritos = document.getElementsByClassName("modMeteorito")
+    const dernav = parseInt(nave.style.left.replace("px",""))+30
+    const izqnav= parseInt(nave.style.left.replace("px",""))
+    const arrnav = parseInt(nave.style.top.replace("px",""))
+    for(let i=0;i<meteoritos.length;i++){
+        const derMet = parseInt(meteoritos[i].style.left.replace("px",""))+60
+        const izMet = parseInt(meteoritos[i].style.left.replace("px",""))
+        const abMet = parseInt(meteoritos[i].style.top.replace("px",""))+60
+        const max = abMet +30
+        const min = abMet -30
+        if((820 <max && 820 >min) && ((dernav >= derMet && izqnav <= derMet) || (dernav >= izMet && izqnav <= izMet)||(izqnav > izqMisil && dernav < derMet))){
+            meteoritos[i].remove();
                 nave.remove();
-                meteos[i].remove()
+                alert("Has perdido")
+            
+            }
+
         }
 
     }
-}
+
+setInterval(destruirNave,100);
+
 
 function crearNave() {
     const nav = document.getElementById("nave") //Donde lo quieres meter
